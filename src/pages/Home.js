@@ -1,10 +1,21 @@
 import React from 'react'
+import Hero from '../components/Hero'
+import Banner from '../components/Banner'
+import { Link } from 'react-router-dom'
+
 
 function Home () {
 	return (
-		<div>
-			This text is from Home.js
-		</div>
+		<Hero>
+			<Banner
+				title="Luxurious Rooms"
+				subtitle="Delux rooms starting at $299"
+			>
+				<Link to="/rooms" className="btn-primary">
+					Our Rooms
+				</Link>
+			</Banner>
+		</Hero>
 	)
 }
 
