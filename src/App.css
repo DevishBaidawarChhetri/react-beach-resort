@@ -294,6 +294,7 @@ h6 {
 
 .services h6 {
 	letter-spacing: var(--mainSpacing);
+	text-transform: capitalize;
 }
 
 .services p {
