@@ -11,7 +11,7 @@ This is a beach resort website project.
 
 #### Clone:
 
-`git clone https://github.com/Rohan-Shakya/react-beach-resort.git`
+`git clone https://github.com/DevishBaidawarChhetri/react-beach-resort.git`
 
 `cd react-beach-resort`
 
