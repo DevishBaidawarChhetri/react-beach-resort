@@ -1,0 +1,28 @@
+/* Variables */
+@import './abstracts/variables.css';
+
+/* Base */
+@import './base/base.css';
+
+@import './base/utility.css';
+
+/* Layouts */
+@import './layouts/navbar.css';
+
+@import './layouts/hero.css';
+
+@import './layouts/banner.css';
+
+@import './layouts/title.css';
+
+@import './layouts/services.css';
+
+@import './layouts/feature.css';
+
+@import './layouts/room.css';
+
+@import './layouts/singleRoom.css';
+
+@import './layouts/roomlist.css';
+
+@import './layouts/roomFilter.css';
