@@ -6,6 +6,7 @@ This is a beach resort website project.
 
 - React
 - React router for routing
+- Context to pass data through component without having to pass props down manually at every level
 
 ### Getting started:
 
