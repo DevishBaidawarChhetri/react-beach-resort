@@ -4,9 +4,10 @@ This is a beach resort website project.
 
 ### Uses:
 
-- React
-- React router for routing
-- Context to pass data through component without having to pass props down manually at every level
+- [React](https://reactjs.org/) a JavaScript library for building user interfaces.
+- [React-Router](https://reactrouter.com/) for routing.
+- [Context](https://reactjs.org/docs/context.html) to pass data through component without having to pass props down manually at every level.
+- [Styled-Components](https://styled-components.com/) for writing an actual CSS in JavaScript.
 
 ### Getting started:
 
