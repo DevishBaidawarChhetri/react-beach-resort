@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import defaultImage from '../images/room-1.jpeg';
 import PropTypes from 'prop-types';
+
 export default function Room ( { room } ) {
 	const { name, slug, images, price } = room;
 	return (
@@ -18,7 +19,7 @@ export default function Room ( { room } ) {
 		</article>
 	)
 }
-Room.prototype = {
+Room.propTypes = {
 	room: PropTypes.shape( {
 		name: PropTypes.string.isRequired,
 		slug: PropTypes.string.isRequired,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import defaultBG from '../images/room-1.jpeg';
-import Hero from '../components/Hero';
+// import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import { RoomContext } from '../Context';
 import StyledHero from '../components/StyledHero';
@@ -59,7 +59,7 @@ export default class SingleRoom extends Component {
 						<article className="info">
 							<h3>Info</h3>
 							<h6>price: ${ price }</h6>
-							<h6>size: ${ size } Sqft.</h6>
+							<h6>size: { size } Sqft.</h6>
 							<h6>
 								max capacity: {
 									capacity > 1 ? `${ capacity } people` : `${ capacity } person`
@@ -84,7 +84,7 @@ export default class SingleRoom extends Component {
 						{
 							extras.map( ( item, index ) => {
 								return (
-									<li key="index">• { item }</li>
+									<li key={ index }>• { item }</li>
 								)
 							} )
 						}

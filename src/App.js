@@ -6,6 +6,7 @@ import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 function App () {
 	return (
 		<React.Fragment>
@@ -18,6 +19,7 @@ function App () {
 					<Route component={ Error } />
 				</Switch>
 			</Router>
+			<Footer/>
 		</React.Fragment>
 	);
 }
