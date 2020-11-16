@@ -19,7 +19,7 @@ function App () {
 					<Route component={ Error } />
 				</Switch>
 			</Router>
-			<Footer/>
+			<Footer />
 		</React.Fragment>
 	);
 }
