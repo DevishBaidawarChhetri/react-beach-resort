@@ -5,6 +5,7 @@ import Title from '../components/Title';
 export default function RoomsFilter ( { rooms } ) {
   const context = useContext( RoomContext );
   // console.log( context );
+  
   const {
     handleChange,
     type,
@@ -29,7 +30,7 @@ export default function RoomsFilter ( { rooms } ) {
   // Add type "all" in types array
   types = [ 'all', ...types ];
 
-  // Maping to jsx
+  // Maping room types to jsx
   types = types.map( ( item, index ) => {
     return <option value={ item } key={ index }>{ item }</option>
   } );
@@ -38,7 +39,9 @@ export default function RoomsFilter ( { rooms } ) {
   let peopleCapacity = getUnique( rooms, 'capacity' );
   peopleCapacity = peopleCapacity.map( ( item, index ) => {
     return <option key={ index } value={ item }>{ item }</option>
-  } )
+  } );
+
+  //
 
   return (
     <section className="filter-container">
@@ -47,7 +50,12 @@ export default function RoomsFilter ( { rooms } ) {
         {/* Select Type Begins */ }
         <div className="form-group">
           <label htmlFor="type">Room Type</label>
-          <select name="type" id="type" value={ type } className="form-control" onChange={ handleChange }>
+          <select
+            name="type"
+            id="type"
+            className="form-control"
+            value={ type }
+            onChange={ handleChange }>
             { types }
           </select>
         </div>
@@ -56,12 +64,33 @@ export default function RoomsFilter ( { rooms } ) {
         {/* Guest Begins */ }
         <div className="form-group">
           <label htmlFor="capacity">Guests</label>
-          <select name="capacity" id="capacity" value={ capacity } className="form-control" onChange={ handleChange }>
+          <select
+            name="capacity"
+            id="capacity"
+            className="form-control"
+            value={ capacity }
+            onChange={ handleChange }>
             { peopleCapacity }
           </select>
         </div>
         {/* Guest Ends */ }
 
+        {/* Room Price Begins */ }
+        <div className="form-group">
+          <label htmlFor="price"></label>
+          room price ${ price }
+          <input
+            type="range"
+            name="price"
+            id="price"
+            className="form-control"
+            min={ minPrice }
+            max={ maxPrice }
+            value={ price }
+            onChange={ handleChange }
+          />
+        </div>
+        {/* Room Price Ends */ }
       </form>
     </section>
   )
