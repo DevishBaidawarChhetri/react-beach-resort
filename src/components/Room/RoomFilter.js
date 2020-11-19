@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { RoomContext } from '../Context';
-import Title from '../components/Title';
+import { RoomContext } from '../../Context';
+import Title from '../Banner/Title';
 
 export default function RoomsFilter ( { rooms } ) {
   const context = useContext( RoomContext );

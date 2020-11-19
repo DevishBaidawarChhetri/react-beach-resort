@@ -1,23 +1,23 @@
 /* Using Higher Order Component */
 
 import React from 'react';
+import { withRoomConsumer } from '../../Context';
 import RoomFilter from './RoomFilter';
 import RoomList from './RoomList';
-import { withRoomConsumer } from '../Context';
-import Loading from '../components/Loading';
+import Loading from '../Loading';
 
 function RoomContainer ( { context } ) {
-	const { loading, sortedRooms, rooms } = context;
-	if ( loading )
-	{
-		return <Loading />;
-	}
-	return (
-		<React.Fragment>
-			<RoomFilter rooms={ rooms } />
-			<RoomList rooms={ sortedRooms } />
-		</React.Fragment>
-	)
+  const { loading, sortedRooms, rooms } = context;
+  if ( loading )
+  {
+    return <Loading />;
+  }
+  return (
+    <React.Fragment>
+      <RoomFilter rooms={ rooms } />
+      <RoomList rooms={ sortedRooms } />
+    </React.Fragment>
+  )
 }
 
 export default withRoomConsumer( RoomContainer );
