@@ -27,7 +27,8 @@ class RoomProvider extends Component {
     try
     {
       let response = await Client.getEntries( {
-        content_type: 'beachResortRoom'
+        content_type: 'beachResortRoom',
+        order: 'sys.createdAt'
       } );
       let rooms = this.formatData( response.items );
       // console.log( rooms );
