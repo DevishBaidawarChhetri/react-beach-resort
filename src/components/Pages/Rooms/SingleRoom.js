@@ -72,7 +72,7 @@ export default class SingleRoom extends Component {
               </h6>
               <h6>
                 {
-                  breakfast && "free breakfast included"
+                  breakfast ? "free breakfast included" : "free breakfast not included"
                 }
               </h6>
             </article>
