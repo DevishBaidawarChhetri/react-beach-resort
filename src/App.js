@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/App.css';
+import ScrollToTop from './ScrollToTop';
 import Home from './components/Pages/Index/Home';
 import Rooms from './components/Pages/Rooms/Rooms';
 import SingleRoom from './components/Pages/Rooms/SingleRoom';
@@ -11,6 +12,7 @@ function App () {
   return (
     <React.Fragment>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route exact path='/' component={ Home } />
